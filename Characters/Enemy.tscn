@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c41iyx5201lom"]
+[gd_scene load_steps=22 format=3 uid="uid://c41iyx5201lom"]
 
 [ext_resource type="Texture2D" uid="uid://fcbj68d5na0q" path="res://Sprites/Mystic Woods/characters/slime.png" id="1_o070g"]
 [ext_resource type="Script" path="res://Characters/Enemy.gd" id="1_wgeul"]
@@ -132,17 +132,19 @@ radius = 5.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_rltc6"]
 radius = 58.0086
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7fxvh"]
+radius = 8.08824
+
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_wgeul")
-speed = 45.0
+speed = 55.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -1)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_nks23")
-animation = &"walk"
-frame_progress = 0.64837
+animation = &"idle"
 speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -156,6 +158,12 @@ collision_mask = 2
 position = Vector2(6, 3)
 shape = SubResource("CircleShape2D_rltc6")
 debug_color = Color(0.929412, 0.223529, 0.356863, 0.419608)
+
+[node name="Enemy_Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_Hitbox"]
+scale = Vector2(0.98909, 0.988175)
+shape = SubResource("CircleShape2D_7fxvh")
 
 [connection signal="body_shape_entered" from="Actionable" to="." method="_on_actionable_body_shape_entered"]
 [connection signal="body_shape_exited" from="Actionable" to="." method="_on_actionable_body_shape_exited"]

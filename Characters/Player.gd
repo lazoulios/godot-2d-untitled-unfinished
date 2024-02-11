@@ -19,16 +19,19 @@ func _physics_process(_delta):
 			attack()
 
 func move():
-
 	input_movement = Input.get_vector("left","right","up","down")
-	
 	if input_movement != Vector2.ZERO:
 		animation_tree.set("parameters/idle/blend_position",input_movement)
 		animation_tree.set("parameters/walk/blend_position",input_movement)
 		animation_tree.set("parameters/run/blend_position",input_movement)
 		animation_tree.set("parameters/attack/blend_position",input_movement)
-		state_machine.travel("walk")
-		velocity = input_movement * move_speed
+		if Input.get_action_strength("run"):
+			velocity = input_movement * (move_speed+sprint_speed)
+			state_machine.travel("run")
+		else :
+			velocity = input_movement * move_speed
+			state_machine.travel("walk")
+			
 
 	if input_movement == Vector2.ZERO:
 		state_machine.travel("idle")

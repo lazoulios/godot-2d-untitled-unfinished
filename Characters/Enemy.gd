@@ -10,11 +10,16 @@ func _ready():
 func _physics_process(_delta):
 	if player_chase:
 		position += (player.position -position) / speed
+		$AnimatedSprite2D.play("walk")
+		if (player.position.x - position.x < 0):
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.flip_h = false
 
 func _on_actionable_body_shape_entered(_body_rid:RID, body:Node2D, _body_shape_index:int, _local_shape_index:int):
 	player = body
 	player_chase = true
-	$AnimatedSprite2D.play("walk")
+	
 
 func _on_actionable_body_shape_exited(_body_rid:RID, _body:Node2D, _body_shape_index:int, _local_shape_index:int):
 	player = null
