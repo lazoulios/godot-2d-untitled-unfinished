@@ -7,20 +7,16 @@ var player = null
 var health = 100
 
 func _ready():
-	$AnimatedSprite2D.play("idle")
+	$AnimationPlayer.play("idle")
 
 func _physics_process(_delta):
 	if health <=0:
-		$AnimatedSprite2D.play("death")
-		await $AnimatedSprite2D.animation_finished
+		$AnimationPlayer.play("death")
+		await $AnimationPlayer.animation_finished
 		queue_free()
 	if player_chase:
 		position += (player.position -position) / speed
-		$AnimatedSprite2D.play("walk")
-		if (player.position.x - position.x < 0):
-			$AnimatedSprite2D.flip_h = true
-		else:
-			$AnimatedSprite2D.flip_h = false
+		$AnimationPlayer.play("walk")
 
 func _on_actionable_body_shape_entered(_body_rid:RID, body:Node2D, _body_shape_index:int, _local_shape_index:int):
 	player = body
@@ -29,7 +25,7 @@ func _on_actionable_body_shape_entered(_body_rid:RID, body:Node2D, _body_shape_i
 func _on_actionable_body_shape_exited(_body_rid:RID, _body:Node2D, _body_shape_index:int, _local_shape_index:int):
 	player = null
 	player_chase = false
-	$AnimatedSprite2D.play("idle")
+	$AnimationPlayer.play("idle")
 
 func enemy():
 	pass

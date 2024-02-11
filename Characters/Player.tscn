@@ -1,7 +1,7 @@
 [gd_scene load_steps=58 format=3 uid="uid://c4ywcny4iwy67"]
 
 [ext_resource type="Script" path="res://Characters/Player.gd" id="1_ksqon"]
-[ext_resource type="Texture2D" uid="uid://5u5ta5u3xwkj" path="res://Sprites/Sprout Lands - Premium Pack/Characters/Premium Charakter Spritesheet.png" id="2_83fmr"]
+[ext_resource type="Texture2D" path="res://Sprites/Sprout Lands - Premium Pack/Characters/Premium Charakter Spritesheet.png" id="2_83fmr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0kqu"]
 size = Vector2(10, 6.77778)
