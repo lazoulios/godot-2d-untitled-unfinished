@@ -2098,11 +2098,6 @@ position = Vector2(409, 253)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="Enemy" parent="." instance=ExtResource("2_ee3v7")]
-light_mask = 2
-visibility_layer = 2
-position = Vector2(152, 261)
-
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_388ak")
@@ -2131,3 +2126,16 @@ color = Color(0.541176, 0.541176, 0.541176, 1)
 energy = 0.25
 shadow_enabled = true
 height = 1.0
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Enemy" parent="CanvasGroup" instance=ExtResource("2_ee3v7")]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(152, 261)
+
+[node name="Enemy2" parent="CanvasGroup" instance=ExtResource("2_ee3v7")]
+position = Vector2(339, 132)
+
+[node name="Enemy3" parent="CanvasGroup" instance=ExtResource("2_ee3v7")]
+position = Vector2(320, 401)

@@ -47,7 +47,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_j8fis"]
 resource_name = "attack_down"
-length = 0.5
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -55,10 +55,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [129, 130, 131, 132, 133, 134]
+"values": [131, 132, 133, 134]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -67,7 +67,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5),
+"times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -81,7 +81,7 @@ tracks/2/path = NodePath("Axe/CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 0.4, 0.5),
+"times": PackedFloat32Array(0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-10.3846, 1.53846), Vector2(-1.20192, 11.4063), Vector2(-1.20192, 11.4063)]
@@ -93,7 +93,7 @@ tracks/3/path = NodePath("Axe/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -101,7 +101,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_8hqme"]
 resource_name = "attack_left"
-length = 0.5
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -109,10 +109,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [145, 146, 147, 148, 149, 150]
+"values": [147, 148, 149, 150]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -121,7 +121,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5),
+"times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -135,7 +135,7 @@ tracks/2/path = NodePath("Axe/CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 0.4),
+"times": PackedFloat32Array(0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-0.769231, -3.07692), Vector2(-5.38462, 0.769231)]
@@ -147,7 +147,7 @@ tracks/3/path = NodePath("Axe/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.1, 0.3, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -155,7 +155,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_ohg2d"]
 resource_name = "attack_right"
-length = 0.5
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -163,10 +163,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [153, 154, 155, 156, 157, 158]
+"values": [155, 156, 157, 158]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -175,7 +175,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5),
+"times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -189,7 +189,7 @@ tracks/2/path = NodePath("Axe/CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 0.4),
+"times": PackedFloat32Array(0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(3.07692, -2.30769), Vector2(5.38462, 2.30769)]
@@ -201,7 +201,7 @@ tracks/3/path = NodePath("Axe/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.1, 0.3, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -209,7 +209,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_p08qn"]
 resource_name = "attack_up"
-length = 0.5
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -217,10 +217,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [137, 138, 139, 140, 141, 142]
+"values": [139, 140, 141, 142]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -229,7 +229,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5),
+"times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -243,7 +243,7 @@ tracks/2/path = NodePath("Axe/CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 0.4),
+"times": PackedFloat32Array(0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(6.92308, -4.61539), Vector2(-5.96046e-08, -10)]
@@ -255,7 +255,7 @@ tracks/3/path = NodePath("Axe/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.1, 0.3, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -665,6 +665,8 @@ parameters/run/blend_position = Vector2(-0.00160003, 0.024229)
 parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="Axe" type="Area2D" parent="."]
+light_mask = 32
+visibility_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Axe"]
 position = Vector2(-1.20192, 11.4063)
@@ -675,3 +677,9 @@ disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player_Hitbox"]
 shape = SubResource("CircleShape2D_8w1yu")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Player_Hitbox" to="." method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="Player_Hitbox" to="." method="_on_player_hitbox_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -11,12 +11,23 @@ var input_movement = Vector2.ZERO
 enum player_states {MOVE, IDLE, RUN, ATTACK}
 var current_state = player_states.MOVE
 
+var enemy_in_attack_range = false
+var enemy_attack_cooldown = true
+var health = 100
+var player_alive = true
+
 func _physics_process(_delta):
+	enemy_attack()
 	match current_state:
 		player_states.MOVE:
 			move()
 		player_states.ATTACK:
 			attack()
+	if health <=0:
+		player_alive = false #go to respawn point
+		health = 0
+		print("player has been killed")
+		self.queue_free()
 
 func move():
 	input_movement = Input.get_vector("left","right","up","down")
@@ -50,3 +61,21 @@ func attack():
 
 func on_state_reset():
 	current_state = player_states.MOVE
+
+func _on_player_hitbox_body_exited(body:Node2D):
+	if body.has_method("enemy"):
+		enemy_in_attack_range = false
+
+func _on_player_hitbox_body_entered(body:Node2D):
+	if body.has_method("enemy"):
+		enemy_in_attack_range = true
+
+func enemy_attack():
+	if enemy_in_attack_range==true and enemy_attack_cooldown==true:
+		health -= 10
+		print(health)
+		enemy_attack_cooldown = false
+		$Timer.start()
+
+func _on_timer_timeout():
+	enemy_attack_cooldown = true

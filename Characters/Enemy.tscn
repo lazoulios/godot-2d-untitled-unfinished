@@ -81,7 +81,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kiwii")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -127,13 +127,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8ywu1"]
-radius = 5.0
+radius = 3.33282
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rltc6"]
 radius = 58.0086
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7fxvh"]
-radius = 8.08824
+radius = 7.1492
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_wgeul")
@@ -145,9 +145,12 @@ position = Vector2(0, -1)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_nks23")
 animation = &"idle"
+autoplay = "idle"
 speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(1.20019, 1.28108)
 shape = SubResource("CircleShape2D_8ywu1")
 
 [node name="Actionable" type="Area2D" parent="."]
@@ -160,6 +163,8 @@ shape = SubResource("CircleShape2D_rltc6")
 debug_color = Color(0.929412, 0.223529, 0.356863, 0.419608)
 
 [node name="Enemy_Hitbox" type="Area2D" parent="."]
+light_mask = 33
+visibility_layer = 33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_Hitbox"]
 scale = Vector2(0.98909, 0.988175)
@@ -167,3 +172,5 @@ shape = SubResource("CircleShape2D_7fxvh")
 
 [connection signal="body_shape_entered" from="Actionable" to="." method="_on_actionable_body_shape_entered"]
 [connection signal="body_shape_exited" from="Actionable" to="." method="_on_actionable_body_shape_exited"]
+[connection signal="area_entered" from="Enemy_Hitbox" to="." method="_on_enemy_hitbox_area_entered"]
+[connection signal="area_exited" from="Enemy_Hitbox" to="." method="_on_enemy_hitbox_area_exited"]
