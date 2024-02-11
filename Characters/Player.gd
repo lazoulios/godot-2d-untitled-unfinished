@@ -18,6 +18,8 @@ func _physics_process(_delta):
 	)
 
 	var sprint = Input.get_action_strength("run")
+	var attack = Input.get_action_strength("attack")
+
 	update_animation_parameters(input_direction)
 
 	# Update velocity
@@ -29,19 +31,22 @@ func _physics_process(_delta):
 	# Move and Slide func ises velocity of character body to move character on map
 	move_and_slide()
 
-	pick_new_state(sprint)
+	pick_new_state(attack, sprint)
 
 func update_animation_parameters(move_input : Vector2):
 	# Don't change animation parameters if there is no move input
 	if (move_input != Vector2.ZERO):
 		animation_tree.set("parameters/idle/blend_position",move_input)
 		animation_tree.set("parameters/walk/blend_position",move_input)
-		animation_tree.set("parameters/run/blend_position",move_input)   
+		animation_tree.set("parameters/run/blend_position",move_input)
+		animation_tree.set("parameters/attack/blend_position",move_input)
 		
-func pick_new_state(sprint):
-	if (velocity!=Vector2.ZERO && sprint!=1):
+func pick_new_state(attack, sprint):
+	if (attack==1):
+		state_machine.travel("attack")
+	elif (velocity!=Vector2.ZERO && sprint!=1):
 		state_machine.travel("walk")
 	elif (velocity!=Vector2.ZERO && sprint==1):
 		state_machine.travel("run")
 	else:
-		state_machine.travel("idle") 
+		state_machine.travel("idle")

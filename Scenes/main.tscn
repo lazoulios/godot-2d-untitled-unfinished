@@ -2123,3 +2123,11 @@ layer_4/name = "Roofs"
 layer_4/z_index = 2
 layer_4/tile_data = PackedInt32Array()
 metadata/_edit_lock_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.541176, 0.541176, 0.541176, 1)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.25
+shadow_enabled = true
+height = 1.0
