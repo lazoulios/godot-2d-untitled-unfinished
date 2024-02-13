@@ -10,10 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Project 2"
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://Sprites/icon.svg"
 
 [autoload]
 
@@ -22,6 +20,12 @@ Global="*res://Characters/global.gd"
 [display]
 
 window/stretch/scale=3.5
+
+[importer_defaults]
+
+animation_library={
+"animation/trimming": true
+}
 
 [input]
 

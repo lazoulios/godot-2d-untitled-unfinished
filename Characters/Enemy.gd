@@ -32,11 +32,11 @@ func enemy():
 
 
 func _on_enemy_hitbox_area_entered(area):
-	if area.name== "Axe":
+	if area.name== "Sword":
 		health -= 20
 		print("Slime health: ",health)
 		
 
 
-func _on_enemy_hitbox_area_exited(area):
+func _on_enemy_hitbox_area_exited(_area):
 	pass # Replace with function body.
