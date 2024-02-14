@@ -73,9 +73,11 @@ func _on_player_hitbox_body_entered(body:Node2D):
 func enemy_attack():
 	if enemy_in_attack_range==true and enemy_attack_cooldown==true:
 		health -= 10
+		state_machine["parameters/conditions/hit"] = true
 		print(health)
 		enemy_attack_cooldown = false
 		$Timer.start()
 
 func _on_timer_timeout():
 	enemy_attack_cooldown = true
+	state_machine["parameters/conditions/hit"] = false

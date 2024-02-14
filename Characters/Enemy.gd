@@ -40,3 +40,4 @@ func _on_enemy_hitbox_area_entered(area):
 
 func _on_enemy_hitbox_area_exited(_area):
 	pass # Replace with function body.
+
