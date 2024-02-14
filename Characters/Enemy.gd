@@ -12,9 +12,7 @@ func _ready():
 func _physics_process(_delta):
 	if health <=0:
 		$AnimationPlayer.play("death")
-		await $AnimationPlayer.animation_finished
-		queue_free()
-	if player_chase:
+	elif player_chase:
 		position += (player.position -position) / speed
 		$AnimationPlayer.play("walk")
 
@@ -30,13 +28,12 @@ func _on_actionable_body_shape_exited(_body_rid:RID, _body:Node2D, _body_shape_i
 func enemy():
 	pass
 
-
 func _on_enemy_hitbox_area_entered(area):
 	if area.name== "Sword":
 		health -= 20
 		print("Slime health: ",health)
-		
-
+		if health > 0:
+			$AnimationPlayer.play("hit")
 
 func _on_enemy_hitbox_area_exited(_area):
 	pass # Replace with function body.
