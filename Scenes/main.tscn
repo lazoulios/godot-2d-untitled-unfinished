@@ -2436,13 +2436,13 @@ height = 1.0
 [node name="Enemy" parent="CanvasGroup" instance=ExtResource("2_ee3v7")]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(152, 261)
-scale = Vector2(0.8, 0.8)
+position = Vector2(312, 224)
+scale = Vector2(0.768944, 0.789945)
 
 [node name="Enemy2" parent="CanvasGroup" instance=ExtResource("2_ee3v7")]
-position = Vector2(339, 132)
+position = Vector2(310, 275)
 scale = Vector2(0.8, 0.8)
 
 [node name="Enemy3" parent="CanvasGroup" instance=ExtResource("2_ee3v7")]
-position = Vector2(320, 401)
+position = Vector2(319, 323)
 scale = Vector2(0.8, 0.8)

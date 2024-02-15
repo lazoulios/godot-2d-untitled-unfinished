@@ -1,40 +1,47 @@
 extends CharacterBody2D
 
 @export var speed : float = 150
+@onready var anim_player = $AnimationPlayer
 var player_chase = false
 var player = null
 
 var health = 100
+var move = false
 
 func _ready():
-	$AnimationPlayer.play("idle")
+	anim_player.play("idle")
 
 func _physics_process(_delta):
 	if health <=0:
-		$AnimationPlayer.play("death")
+		anim_player.play("death")
 	elif player_chase:
-		position += (player.position -position) / speed
-		$AnimationPlayer.play("walk")
+		if move == true:
+			position += (player.position -position) / speed
+			anim_player.play("walk")
 
 func _on_actionable_body_shape_entered(_body_rid:RID, body:Node2D, _body_shape_index:int, _local_shape_index:int):
 	player = body
 	player_chase = true
+	anim_player.play("walk")
+	move = true
 	
 func _on_actionable_body_shape_exited(_body_rid:RID, _body:Node2D, _body_shape_index:int, _local_shape_index:int):
 	player = null
 	player_chase = false
-	$AnimationPlayer.play("idle")
+	anim_player.play("idle")
 
 func enemy():
 	pass
 
 func _on_enemy_hitbox_area_entered(area):
 	if area.name== "Sword":
+		move = false
+		$AnimationPlayer.play("hit")
 		health -= 20
 		print("Slime health: ",health)
-		if health > 0:
-			$AnimationPlayer.play("hit")
 
 func _on_enemy_hitbox_area_exited(_area):
 	pass # Replace with function body.
 
+func move_char():
+	move = true

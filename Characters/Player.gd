@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var move_speed : float = 100
 @export var sprint_speed : float = 20
+@export var knockback_power = 500
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
@@ -83,6 +84,7 @@ func _on_player_hitbox_body_entered(body:Node2D):
 func enemy_attack():
 	if enemy_in_attack_range==true and enemy_attack_cooldown==true:
 		health -= 10
+		knockback()
 		current_state = player_states.HIT
 		print(health)
 		enemy_attack_cooldown = false
@@ -94,3 +96,8 @@ func _on_timer_timeout():
 func hit():
 	state_machine.travel("hit")
 	current_state = player_states.WALK
+
+func knockback():
+	var knockback_direction = -velocity.normalized() * knockback_power
+	velocity = knockback_direction
+	move_and_slide()
