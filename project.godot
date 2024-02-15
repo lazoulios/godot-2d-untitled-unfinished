@@ -13,10 +13,6 @@ config_version=5
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
-[autoload]
-
-Global="*res://Characters/global.gd"
-
 [display]
 
 window/stretch/scale=3.5
