@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b5asayc57blnk"]
+[gd_scene load_steps=28 format=3 uid="uid://b5asayc57blnk"]
 
 [ext_resource type="Script" path="res://Levels/main.gd" id="1_eh2nj"]
 [ext_resource type="PackedScene" uid="uid://c4ywcny4iwy67" path="res://Characters/Player.tscn" id="1_h5vuk"]
@@ -1130,6 +1130,13 @@ sources/27 = SubResource("TileSetAtlasSource_rxucy")
 sources/28 = SubResource("TileSetAtlasSource_8tqu1")
 sources/31 = SubResource("TileSetAtlasSource_2kup1")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ns2xd"]
+cull_mode = 1
+polygon = PackedVector2Array(462, 121, 462, 126, 463, 129, 464, 135, 462, 138, 458, 140, 459, 142, 453, 142, 450, 141, 449, 143, 444, 143, 441, 143, 437, 142, 434, 140, 432, 139, 432, 132, 432, 123, 434, 119, 432, 122, 432, 117, 434, 111, 440, 111, 465, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avmbu"]
+size = Vector2(33, 12)
+
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_eh2nj")
@@ -1141,6 +1148,10 @@ position = Vector2(338, 183)
 scale = Vector2(0.8, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 215
+limit_top = 118
+limit_right = 638
+limit_bottom = 377
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
@@ -1148,6 +1159,7 @@ drag_vertical_enabled = true
 position = Vector2(1.24998, -1.25)
 scale = Vector2(2, 2)
 energy = 0.5
+shadow_enabled = true
 shadow_filter_smooth = 50.0
 texture = ExtResource("3_jg76u")
 texture_scale = 0.35
@@ -1169,3 +1181,12 @@ layer_3/tile_data = PackedInt32Array(524308, 31, 5, 720914, 196639, 5, 1179678, 
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.223529, 0.223529, 0.223529, 1)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ns2xd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(448.5, 149)
+shape = SubResource("RectangleShape2D_avmbu")
