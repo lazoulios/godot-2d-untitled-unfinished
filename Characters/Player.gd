@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var move_speed : float = 100
 @export var sprint_speed : float = 20
-@export var knockback_power = 500
+@export var knockback_power = 800
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")

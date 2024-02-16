@@ -1,7 +1,8 @@
-[gd_scene load_steps=72 format=3 uid="uid://c4ywcny4iwy67"]
+[gd_scene load_steps=73 format=3 uid="uid://c4ywcny4iwy67"]
 
 [ext_resource type="Script" path="res://Characters/Player.gd" id="1_ksqon"]
 [ext_resource type="Texture2D" uid="uid://dyau3o5b21pgj" path="res://Sprites/Gumdrop Sprites/Raver_P0.png" id="2_fffql"]
+[ext_resource type="Texture2D" uid="uid://c55t3mk6tba3m" path="res://Sprites/Mine/light.png" id="3_tp8ao"]
 
 [sub_resource type="Gradient" id="Gradient_vmofp"]
 offsets = PackedFloat32Array(0, 0.0454545)
@@ -1643,6 +1644,7 @@ disabled = true
 debug_color = Color(0.937255, 0.0352941, 0.611765, 0.419608)
 
 [node name="PointLight2D" type="PointLight2D" parent="Sword"]
+visible = false
 show_behind_parent = true
 light_mask = 512
 visibility_layer = 512
@@ -1661,6 +1663,15 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_akoc3")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1.24998, -1.25)
+scale = Vector2(2, 2)
+energy = 0.5
+shadow_enabled = true
+shadow_filter_smooth = 50.0
+texture = ExtResource("3_tp8ao")
+texture_scale = 0.35
 
 [connection signal="body_entered" from="Player_Hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="Player_Hitbox" to="." method="_on_player_hitbox_body_exited"]

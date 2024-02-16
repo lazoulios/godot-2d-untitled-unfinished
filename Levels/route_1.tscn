@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmcr5mpsx2j4v"]
+
+[ext_resource type="PackedScene" uid="uid://c4ywcny4iwy67" path="res://Characters/Player.tscn" id="1_ak4cn"]
+[ext_resource type="Texture2D" uid="uid://c55t3mk6tba3m" path="res://Sprites/Mine/light.png" id="2_0evu0"]
+
+[node name="route_1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ak4cn")]
+position = Vector2(329, 182)
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
+position = Vector2(1, 0)
+scale = Vector2(2, 2)
+energy = 0.5
+shadow_enabled = true
+shadow_filter_smooth = 50.0
+texture = ExtResource("2_0evu0")
+texture_scale = 0.35
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.392157, 0.392157, 0.392157, 1)

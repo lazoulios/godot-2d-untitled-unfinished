@@ -18,6 +18,7 @@ func _physics_process(_delta):
 		if move == true:
 			position += (player.position -position) / speed
 			anim_player.play("walk")
+			move_and_collide(Vector2(0,0))
 
 func _on_actionable_body_shape_entered(_body_rid:RID, body:Node2D, _body_shape_index:int, _local_shape_index:int):
 	player = body
