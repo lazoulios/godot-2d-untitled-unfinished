@@ -6,14 +6,14 @@
 [node name="route_1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ak4cn")]
-position = Vector2(318, 388)
+position = Vector2(299, 677)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(-9, 79)
+position = Vector2(1, 727)
 tile_set = ExtResource("2_hk82v")
 format = 2
 layer_0/name = "BaseGround"

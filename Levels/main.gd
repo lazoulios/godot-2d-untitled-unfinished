@@ -14,4 +14,4 @@ func _process(_delta):
 
 func _on_next_area_body_entered(body:Node2D):
 	if body.has_method("player"):
-		SceneManager.change_scene(SceneManager.route_1)
+		SceneManager.change_scene(SceneManager.route_1, 400, 900)
