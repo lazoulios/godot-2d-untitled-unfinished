@@ -1630,7 +1630,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_hjpni")
 anim_player = NodePath("../AnimationPlayer")
 parameters/attack/blend_position = Vector2(0.2592, -0.00484574)
-parameters/idle/blend_position = Vector2(0, 0)
+parameters/idle/blend_position = Vector2(-0.00160003, -0.669312)
 parameters/run/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
 

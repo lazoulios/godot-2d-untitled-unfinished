@@ -3,6 +3,8 @@ extends CanvasLayer
 const main = preload("res://Levels/main.tscn")
 const route_1 = preload("res://Levels/route_1.tscn")
 
+var kills_to_change_lvl = 0
+
 func _ready():
 	get_node("ColorRect").hide()
 

@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
 @export var speed : float = 150
+@export var health = 100
 @onready var anim_player = $AnimationPlayer
 var player_chase = false
 var player = null
 
-var health = 100
+
 var move = false
 
 func _ready():
@@ -46,3 +47,7 @@ func _on_enemy_hitbox_area_exited(_area):
 
 func move_char():
 	move = true
+
+#used to not allow player to move from lvl till killing the mobs
+func add_to_kills_needed():
+	SceneManager.kills_to_change_lvl += 1
