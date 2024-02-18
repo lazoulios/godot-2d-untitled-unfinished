@@ -13,6 +13,10 @@ config_version=5
 run/main_scene="res://Levels/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
+[autoload]
+
+SceneManager="*res://Levels/scene_manager.tscn"
+
 [display]
 
 window/size/viewport_width=1920

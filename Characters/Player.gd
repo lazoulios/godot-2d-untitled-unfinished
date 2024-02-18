@@ -101,3 +101,6 @@ func knockback():
 	var knockback_direction = -velocity.normalized() * knockback_power
 	velocity = knockback_direction
 	move_and_slide()
+
+func player():
+	pass

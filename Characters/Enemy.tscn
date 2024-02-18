@@ -16,7 +16,7 @@ fill_from = Vector2(0.5, 0.46789)
 radius = 3.33282
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rltc6"]
-radius = 58.0086
+radius = 67.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7fxvh"]
 radius = 7.1492
@@ -253,7 +253,6 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
-position = Vector2(6, 3)
 shape = SubResource("CircleShape2D_rltc6")
 debug_color = Color(0.929412, 0.223529, 0.356863, 0.419608)
 
