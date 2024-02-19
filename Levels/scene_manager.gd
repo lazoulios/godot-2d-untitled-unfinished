@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+#for spawning enemies
+var _enemyPermanence = []
+
 const main = preload("res://Levels/main.tscn")
 const route_1 = preload("res://Levels/route_1.tscn")
 

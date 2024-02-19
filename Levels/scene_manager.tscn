@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" path="res://Levels/scene_manager.gd" id="1_17u2p"]
 
+[sub_resource type="Animation" id="Animation_pjxha"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_fa2l4"]
 resource_name = "trans_in"
 length = 1.5
@@ -17,9 +20,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_pjxha"]
-length = 0.001
 
 [sub_resource type="Animation" id="Animation_5bdvv"]
 resource_name = "trans_out"

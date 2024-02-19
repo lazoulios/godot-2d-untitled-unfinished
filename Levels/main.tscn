@@ -51,11 +51,12 @@ color = Color(0.392157, 0.392157, 0.392157, 1)
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("14_l0ltf")]
 position = Vector2(447, 156)
+_permanenceValue = "mian_one"
 
 [node name="next_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="next_area"]
-position = Vector2(448, 128.5)
+position = Vector2(450, 120)
 shape = SubResource("RectangleShape2D_avmbu")
 
 [connection signal="body_entered" from="next_area" to="." method="_on_next_area_body_entered"]

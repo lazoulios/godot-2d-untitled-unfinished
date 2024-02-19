@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var _permanenceValue : String 
 @export var speed : float = 150
 @export var health = 100
 @onready var anim_player = $AnimationPlayer
@@ -11,10 +12,15 @@ var move = false
 
 func _ready():
 	anim_player.play("idle")
+	if SceneManager._enemyPermanence.has(_permanenceValue):
+		self.queue_free()	
+	else:
+		pass
 
 func _physics_process(_delta):
 	if health <=0:
 		anim_player.play("death")
+		SceneManager._enemyPermanence.append(_permanenceValue)
 	elif player_chase:
 		if move == true:
 			position += (player.position -position) / speed
