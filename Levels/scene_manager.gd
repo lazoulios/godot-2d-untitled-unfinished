@@ -5,6 +5,7 @@ var _enemyPermanence = []
 
 const main = preload("res://Levels/main.tscn")
 const route_1 = preload("res://Levels/route_1.tscn")
+const new_ville = preload("res://Levels/new_ville.tscn")
 
 var kills_to_change_lvl = 0
 
