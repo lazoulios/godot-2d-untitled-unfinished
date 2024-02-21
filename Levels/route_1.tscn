@@ -16,7 +16,7 @@ y_sort_enabled = true
 script = ExtResource("1_4ye1g")
 
 [node name="Player" parent="." instance=ExtResource("1_ak4cn")]
-position = Vector2(414, -529)
+position = Vector2(361, -195)
 scale = Vector2(0.8, 0.8)
 sprint_speed = 30.0
 
