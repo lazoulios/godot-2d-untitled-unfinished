@@ -56,6 +56,7 @@ position = Vector2(447, 156)
 _permanenceValue = "mian_one"
 
 [node name="Collectables" type="CanvasGroup" parent="."]
+y_sort_enabled = true
 
 [node name="apple_tree" parent="Collectables" instance=ExtResource("5_h1hs2")]
 position = Vector2(602, 274)
