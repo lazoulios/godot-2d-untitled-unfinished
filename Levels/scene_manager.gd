@@ -3,14 +3,15 @@ extends CanvasLayer
 #for spawning enemies
 var _enemyPermanence = []
 
-var main = load("res://Levels/main.tscn")
-var route_1 = load("res://Levels/route_1.tscn")
-var new_ville = load("res://Levels/new_ville.tscn")
+const main = preload("res://Levels/main.tscn")
+const route_1 = preload("res://Levels/route_1.tscn")
+const new_ville = preload("res://Levels/new_ville.tscn")
 
 var kills_to_change_lvl = 0
 
 func _ready():
 	get_node("ColorRect").hide()
+	var _ignore = _enemyPermanence
 
 func change_scene(scene_path, x, y):
 	get_node("ColorRect").show()
