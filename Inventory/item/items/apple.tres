@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://crxasvxvpb3b6"]
+
+[ext_resource type="Script" path="res://Inventory/item/item_data.gd" id="1_j8hyh"]
+[ext_resource type="Texture2D" uid="uid://pdddwgyg8erp" path="res://Sprites/Shikashi's Fantasy Icons Pack/Shikashi's Fantasy Icons Pack/#1 - Transparent Icons.png" id="2_nxh4c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mle2o"]
+atlas = ExtResource("2_nxh4c")
+region = Rect2(0, 448, 32, 32)
+
+[resource]
+script = ExtResource("1_j8hyh")
+name = "Apple"
+description = "A tasty apple! Heals 5 hp."
+stackable = true
+texture = SubResource("AtlasTexture_mle2o")

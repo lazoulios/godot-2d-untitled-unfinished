@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvxehdw8r0j1e"]
+
+[ext_resource type="Script" path="res://Inventory/inventory/slot.gd" id="1_h60sy"]
+
+[node name="Slot" type="PanelContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(16, 16)
+offset_right = 17.0
+offset_bottom = 16.0
+script = ExtResource("1_h60sy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuantityLabel" type="Label" parent="."]
+visible = false
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 5
+text = "x99"

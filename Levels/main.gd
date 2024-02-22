@@ -2,8 +2,12 @@ extends Node2D
 
 var k
 
+@onready var player: CharacterBody2D = $Player
+@onready var inventory_interface: Control = $UI/InventoryInterface
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	inventory_interface.set_player_inventory_data(player.inventory_data)
 	k = get_node("Enemies/Enemy")
 
 

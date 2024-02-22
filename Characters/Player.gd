@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var inventory_data: InventoryData
+
 @export var move_speed : float = 100
 @export var sprint_speed : float = 20
 @export var knockback_power = 800
