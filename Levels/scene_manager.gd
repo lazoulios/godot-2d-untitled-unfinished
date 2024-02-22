@@ -3,9 +3,9 @@ extends CanvasLayer
 #for spawning enemies
 var _enemyPermanence = []
 
-const main = preload("res://Levels/main.tscn")
-const route_1 = preload("res://Levels/route_1.tscn")
-const new_ville = preload("res://Levels/new_ville.tscn")
+var main = load("res://Levels/main.tscn")
+var route_1 = load("res://Levels/route_1.tscn")
+var new_ville = load("res://Levels/new_ville.tscn")
 
 var kills_to_change_lvl = 0
 

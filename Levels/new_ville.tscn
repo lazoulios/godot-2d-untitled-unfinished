@@ -12,7 +12,7 @@ y_sort_enabled = true
 script = ExtResource("1_1j774")
 
 [node name="Player" parent="." instance=ExtResource("2_p7453")]
-position = Vector2(784, 1041)
+position = Vector2(786, 1015)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 14
