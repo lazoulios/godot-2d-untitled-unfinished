@@ -2,6 +2,7 @@ extends CanvasLayer
 
 #for spawning enemies
 var _enemyPermanence = []
+var _loot_collected = []
 
 const main = preload("res://Levels/main.tscn")
 const route_1 = preload("res://Levels/route_1.tscn")
@@ -11,7 +12,7 @@ var kills_to_change_lvl = 0
 
 func _ready():
 	get_node("ColorRect").hide()
-	var _ignore = _enemyPermanence
+	var _ignore = _enemyPermanence + _loot_collected
 
 func change_scene(scene_path, x, y):
 	get_node("ColorRect").show()

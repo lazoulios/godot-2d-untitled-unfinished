@@ -25,6 +25,8 @@ limit_left = 71
 limit_top = -702
 limit_right = 625
 limit_bottom = 982
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

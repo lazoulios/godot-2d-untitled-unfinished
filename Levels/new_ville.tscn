@@ -5,14 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://c4ywcny4iwy67" path="res://Characters/Player.tscn" id="2_p7453"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgi1u"]
-size = Vector2(29.5, 26.25)
+size = Vector2(31.75, 25.125)
 
 [node name="new_ville" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_1j774")
 
 [node name="Player" parent="." instance=ExtResource("2_p7453")]
-position = Vector2(786, 1015)
+position = Vector2(775, 1071)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 14
@@ -56,7 +56,7 @@ layer_6/tile_data = PackedInt32Array(4456497, 65537, 20, 4456495, 655361, 20, 44
 [node name="to_route_1" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_route_1"]
-position = Vector2(775, 1112)
+position = Vector2(776, 1115)
 shape = SubResource("RectangleShape2D_mgi1u")
 
 [connection signal="body_entered" from="to_route_1" to="." method="_on_to_route_1_body_entered"]

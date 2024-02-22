@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://k3klyss1g2pu"]
+
+[ext_resource type="Texture2D" uid="uid://demqi3i8gqq35" path="res://Sprites/mystic_woods_2.1/sprites/objects/objects.png" id="1_ayewk"]
+[ext_resource type="Script" path="res://Objects/apple_tree.gd" id="2_o38ed"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omhju"]
+atlas = ExtResource("1_ayewk")
+region = Rect2(48, 78, 48, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re58h"]
+atlas = ExtResource("1_ayewk")
+region = Rect2(0, 78, 48, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpajh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omhju")
+}],
+"loop": true,
+"name": &"apples",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re58h")
+}],
+"loop": true,
+"name": &"no_apples",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mynum"]
+radius = 25.0
+
+[node name="apple_tree" type="CharacterBody2D"]
+script = ExtResource("2_o38ed")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -11)
+build_mode = 1
+polygon = PackedVector2Array(-12, 15, -12, 18, -11, 18, -11, 19, -12, 19, -12, 23, -7, 23, -7, 26, 0, 26, 0, 25, 3, 25, 3, 26, 10, 26, 10, 23, 9, 23, 9, 22, 12, 22, 12, 18, 11, 18, 11, 17, 10, 17, 10, 16, 9, 16, 9, 14, 8, 14, 8, 13, -10, 13, -10, 14, -11, 14, -11, 15)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_lpajh")
+animation = &"apples"
+
+[node name="pickable_area" type="Area2D" parent="."]
+position = Vector2(0, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickable_area"]
+position = Vector2(0, 18)
+shape = SubResource("CircleShape2D_mynum")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(16, 1)
+
+[connection signal="body_entered" from="pickable_area" to="." method="_on_pickable_area_body_entered"]
+[connection signal="body_exited" from="pickable_area" to="." method="_on_pickable_area_body_exited"]
