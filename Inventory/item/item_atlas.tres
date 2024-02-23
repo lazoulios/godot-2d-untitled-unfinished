@@ -1,7 +1,8 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://s0ln7jukxg57"]
 
-[ext_resource type="Texture2D" uid="uid://pdddwgyg8erp" path="res://Sprites/Shikashi's Fantasy Icons Pack/Shikashi's Fantasy Icons Pack/#1 - Transparent Icons.png" id="1_1f6o4"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v5irw"]
+load_path = "res://.godot/imported/Sheet.png-b036fc0706b98bd6f4d066b98b63d6bb.ctex"
 
 [resource]
-atlas = ExtResource("1_1f6o4")
-region = Rect2(224, 384, 32, 32)
+atlas = SubResource("CompressedTexture2D_v5irw")
+region = Rect2(48, 48, 16, 16)

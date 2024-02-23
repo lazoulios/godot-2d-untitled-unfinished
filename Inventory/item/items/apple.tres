@@ -1,11 +1,17 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://crxasvxvpb3b6"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://crxasvxvpb3b6"]
 
 [ext_resource type="Script" path="res://Inventory/item/item_data.gd" id="1_j8hyh"]
-[ext_resource type="Texture2D" uid="uid://pdddwgyg8erp" path="res://Sprites/Shikashi's Fantasy Icons Pack/Shikashi's Fantasy Icons Pack/#1 - Transparent Icons.png" id="2_nxh4c"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v7wug"]
+load_path = "res://.godot/imported/Sheet.png-b036fc0706b98bd6f4d066b98b63d6bb.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hioij"]
+atlas = SubResource("CompressedTexture2D_v7wug")
+region = Rect2(0, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mle2o"]
-atlas = ExtResource("2_nxh4c")
-region = Rect2(0, 448, 32, 32)
+atlas = SubResource("AtlasTexture_hioij")
+region = Rect2(0, 0, 16, 16)
 
 [resource]
 script = ExtResource("1_j8hyh")

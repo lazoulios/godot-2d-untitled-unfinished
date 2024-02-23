@@ -34,3 +34,5 @@ visible = false
 modulate = Color(1, 1, 1, 0.490196)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
+
+[connection signal="gui_input" from="InventoryInterface" to="InventoryInterface" method="_on_gui_input"]

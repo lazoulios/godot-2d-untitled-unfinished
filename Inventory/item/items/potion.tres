@@ -1,15 +1,18 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dibkbte7dux6j"]
+[gd_resource type="Resource" script_class="ItemDataConsumable" load_steps=4 format=3 uid="uid://bgwap2m0ow16o"]
 
-[ext_resource type="Script" path="res://Inventory/item/item_data.gd" id="1_1y8gj"]
-[ext_resource type="Texture2D" uid="uid://pdddwgyg8erp" path="res://Sprites/Shikashi's Fantasy Icons Pack/Shikashi's Fantasy Icons Pack/#1 - Transparent Icons.png" id="2_wqbyg"]
+[ext_resource type="Script" path="res://Inventory/item/item_data_consumable.gd" id="1_bxu3u"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m0v83"]
-atlas = ExtResource("2_wqbyg")
-region = Rect2(0, 288, 32, 32)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v5irw"]
+load_path = "res://.godot/imported/Sheet.png-b036fc0706b98bd6f4d066b98b63d6bb.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8qns"]
+atlas = SubResource("CompressedTexture2D_v5irw")
+region = Rect2(80, 48, 16, 16)
 
 [resource]
-script = ExtResource("1_1y8gj")
-name = "Potion"
-description = "A health potion that heals 20 hp."
+script = ExtResource("1_bxu3u")
+heal_value = 10
+name = "Health Potion"
+description = ""
 stackable = true
-texture = SubResource("AtlasTexture_m0v83")
+texture = SubResource("AtlasTexture_i8qns")
