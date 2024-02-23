@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmcr5mpsx2j4v"]
+[gd_scene load_steps=8 format=3 uid="uid://bmcr5mpsx2j4v"]
 
 [ext_resource type="Script" path="res://Levels/route_1.gd" id="1_4ye1g"]
 [ext_resource type="PackedScene" uid="uid://c4ywcny4iwy67" path="res://Characters/Player.tscn" id="1_ak4cn"]
 [ext_resource type="TileSet" uid="uid://ccx6fw513724g" path="res://Tilesets/tiles.tres" id="2_hk82v"]
 [ext_resource type="PackedScene" uid="uid://c41iyx5201lom" path="res://Characters/Enemy.tscn" id="3_x2q7m"]
+[ext_resource type="PackedScene" uid="uid://um7a0ss7rxb7" path="res://Inventory/inventory/ui.tscn" id="5_xx4p5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1gmd"]
 size = Vector2(50, 36)
@@ -73,6 +74,8 @@ shape = SubResource("RectangleShape2D_r1gmd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_new_ville"]
 position = Vector2(410, -700)
 shape = SubResource("RectangleShape2D_pn8c0")
+
+[node name="UI" parent="." instance=ExtResource("5_xx4p5")]
 
 [connection signal="body_entered" from="to_main" to="." method="_on_to_main_body_entered"]
 [connection signal="body_entered" from="to_new_ville" to="." method="_on_to_new_ville_body_entered"]

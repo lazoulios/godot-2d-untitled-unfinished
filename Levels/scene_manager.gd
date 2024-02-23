@@ -14,16 +14,16 @@ func _ready():
 	get_node("ColorRect").hide()
 	var _ignore = _enemyPermanence + _loot_collected
 
-func change_scene(scene_path, x, y):
+func change_scene(scene_path, x, y, inventory):
 	get_node("ColorRect").show()
 	get_node("AnimationPlayer").play("trans_in")
 	await get_node("AnimationPlayer").animation_finished
 
 	var scene = scene_path.instantiate() #loading new scene
+	scene.get_node("Player").inventory_data = inventory
 	get_tree().get_root().get_child(1).free() #deleting old scene
 	get_tree().get_root().add_child(scene) #adding new scene
 	scene.get_node("Player").position = Vector2(x ,y)
-	
 	
 	get_node("AnimationPlayer").play("trans_out")
 	await get_node("AnimationPlayer").animation_finished

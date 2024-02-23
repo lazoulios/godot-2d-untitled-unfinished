@@ -1,16 +1,15 @@
 extends Node2D
 
+@onready var player: CharacterBody2D = $Player
+@onready var inventory_interface: Control = $UI/InventoryInterface
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	inventory_interface.set_player_inventory_data(player.inventory_data)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
 
 
 func _on_to_route_1_body_entered(body:Node2D):
 	if body.has_method("player"):
-		SceneManager.change_scene(SceneManager.route_1,410,-648)
+		SceneManager.change_scene(SceneManager.route_1,410,-648,player.inventory_data)
