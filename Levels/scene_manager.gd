@@ -24,7 +24,9 @@ func change_scene(scene_path, x, y, inventory):
 	get_tree().get_root().get_child(1).free() #deleting old scene
 	get_tree().get_root().add_child(scene) #adding new scene
 	scene.get_node("Player").position = Vector2(x ,y)
+	scene.get_node("UI").hide()
 	
 	get_node("AnimationPlayer").play("trans_out")
 	await get_node("AnimationPlayer").animation_finished
 	get_node("ColorRect").hide()
+	scene.get_node("UI").show()
