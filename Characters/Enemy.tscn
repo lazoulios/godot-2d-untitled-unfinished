@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://c41iyx5201lom"]
+[gd_scene load_steps=16 format=3 uid="uid://c41iyx5201lom"]
 
 [ext_resource type="Texture2D" uid="uid://fcbj68d5na0q" path="res://Sprites/Mystic Woods/characters/slime.png" id="1_o070g"]
 [ext_resource type="Script" path="res://Characters/Enemy.gd" id="1_wgeul"]
+[ext_resource type="PackedScene" uid="uid://wgfrv1pwogtt" path="res://Objects/gold.tscn" id="3_jufwt"]
 
 [sub_resource type="Gradient" id="Gradient_2lfaw"]
 offsets = PackedFloat32Array(0.136364, 0.844156, 1)
@@ -325,6 +326,12 @@ scale_amount_min = 2.0
 scale_amount_max = 4.0
 scale_amount_curve = SubResource("Curve_40ov3")
 color = Color(0.752941, 0.0705882, 0.0980392, 1)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_jufwt")]
+visible = false
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-11, -16)
 
 [connection signal="body_shape_entered" from="Actionable" to="." method="_on_actionable_body_shape_entered"]
 [connection signal="body_shape_exited" from="Actionable" to="." method="_on_actionable_body_shape_exited"]

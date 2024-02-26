@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_8ou1s")
 name = "Gold"
-description = "Gold! Used for leveling up stats."
+description = ""
 stackable = true
 texture = ExtResource("2_i24x0")

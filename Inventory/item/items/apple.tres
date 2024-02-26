@@ -16,6 +16,6 @@ region = Rect2(0, 0, 16, 16)
 [resource]
 script = ExtResource("1_j8hyh")
 name = "Apple"
-description = "A tasty apple! Heals 5 hp."
+description = ""
 stackable = true
 texture = SubResource("AtlasTexture_mle2o")

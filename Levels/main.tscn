@@ -63,6 +63,7 @@ y_sort_enabled = true
 
 [node name="apple_tree" parent="Collectables" instance=ExtResource("5_h1hs2")]
 position = Vector2(602, 274)
+_loot_collected_value = "apple_tree_main"
 
 [node name="next_area" type="Area2D" parent="."]
 

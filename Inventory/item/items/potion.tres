@@ -11,7 +11,7 @@ region = Rect2(80, 48, 16, 16)
 
 [resource]
 script = ExtResource("1_bxu3u")
-heal_value = 10
+heal_value = 20
 name = "Health Potion"
 description = ""
 stackable = true
