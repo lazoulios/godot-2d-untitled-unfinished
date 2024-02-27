@@ -5,7 +5,7 @@ extends StaticBody2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 func _ready():
-	sprite_2d.texture = slot_data.item_data.texture
+	pass
 
 
 func _process(_delta):

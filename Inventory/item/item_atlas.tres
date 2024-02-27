@@ -1,8 +1,7 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://s0ln7jukxg57"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v5irw"]
-load_path = "res://.godot/imported/Sheet.png-b036fc0706b98bd6f4d066b98b63d6bb.ctex"
+[ext_resource type="Texture2D" uid="uid://bmr0kw2wgpkak" path="res://Sprites/16x16 RPG Item Pack/Sheet.png" id="1_qjnno"]
 
 [resource]
-atlas = SubResource("CompressedTexture2D_v5irw")
+atlas = ExtResource("1_qjnno")
 region = Rect2(48, 48, 16, 16)

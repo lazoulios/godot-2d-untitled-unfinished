@@ -19,6 +19,7 @@ SceneManager="*res://Levels/scene_manager.tscn"
 
 [display]
 
+window/stretch/aspect="keep_height"
 window/stretch/scale=3.3
 
 [importer_defaults]

@@ -49,7 +49,6 @@ func _on_enemy_hitbox_area_entered(area):
 		move = false
 		$AnimationPlayer.play("hit")
 		health -= 20
-		print("Slime health: ",health)
 
 func _on_enemy_hitbox_area_exited(_area):
 	pass # Replace with function body.
@@ -60,3 +59,9 @@ func move_char():
 #used to not allow player to move from lvl till killing the mobs
 func add_to_kills_needed():
 	SceneManager.kills_to_change_lvl += 1
+
+func draw_loot():
+	var gold_instance = gold.instantiate()
+	gold_instance.global_position = $Marker2D.global_position
+	get_parent().add_child(gold_instance)
+

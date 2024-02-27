@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://daefkn0mjds6y"]
+
+[ext_resource type="Texture2D" uid="uid://eloov8q1enw1" path="res://Sprites/Mine/rpginventory-Sheet.png" id="1_pde4k"]
+
+[resource]
+atlas = ExtResource("1_pde4k")
+region = Rect2(24, 88, 8, 8)

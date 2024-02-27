@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Objects/gold.gd" id="1_ik4fa"]
 [ext_resource type="Resource" uid="uid://80ukvp8lkbar" path="res://Inventory/item/items/gold.tres" id="2_0dgp8"]
 [ext_resource type="Script" path="res://Inventory/inventory/slot_data.gd" id="3_1ei86"]
-[ext_resource type="Texture2D" uid="uid://b8y0ohsfmqq3y" path="res://Sprites/16x16 RPG Item Pack/Item__27.png" id="4_sr5ee"]
+[ext_resource type="Texture2D" uid="uid://dmc5u1p54qnfi" path="res://Inventory/item/item atlas/gold.tres" id="4_qobcs"]
 
 [sub_resource type="Resource" id="Resource_davu7"]
 script = ExtResource("3_1ei86")
@@ -14,6 +14,7 @@ quantity = 1
 radius = 26.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wcoq0"]
+radius = 8.0
 
 [node name="StaticBody2D" type="StaticBody2D"]
 scale = Vector2(0.5, 0.5)
@@ -21,7 +22,8 @@ script = ExtResource("1_ik4fa")
 slot_data = SubResource("Resource_davu7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("4_sr5ee")
+scale = Vector2(2, 2)
+texture = ExtResource("4_qobcs")
 
 [node name="Area2D" type="Area2D" parent="."]
 

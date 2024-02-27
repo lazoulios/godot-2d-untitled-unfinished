@@ -19,6 +19,6 @@ func _on_next_area_body_entered(body:Node2D):
 			else:
 				if body.has_method("player"):
 					get_node("UI").hide()
-					SceneManager.change_scene(SceneManager.route_1, 400, 900, player.inventory_data)
+					SceneManager.change_scene(SceneManager.route_1, 393, 187, player.inventory_data)
 		else:
 			SceneManager.kills_to_change_lvl=1

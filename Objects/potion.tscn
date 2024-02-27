@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Objects/potion.gd" id="1_ojwkx"]
 [ext_resource type="Resource" uid="uid://bgwap2m0ow16o" path="res://Inventory/item/items/potion.tres" id="2_y4o0h"]
 [ext_resource type="Script" path="res://Inventory/inventory/slot_data.gd" id="3_ddkbv"]
-[ext_resource type="Texture2D" uid="uid://s0ln7jukxg57" path="res://Inventory/item/item_atlas.tres" id="4_fpxtr"]
+[ext_resource type="Texture2D" uid="uid://46udi78h68vv" path="res://Inventory/item/item atlas/potion.tres" id="4_l6smt"]
 
 [sub_resource type="Resource" id="Resource_b33qi"]
 script = ExtResource("3_ddkbv")
@@ -149,8 +149,8 @@ slot_data = SubResource("Resource_b33qi")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 position = Vector2(-1.19209e-07, 5.96046e-08)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("4_fpxtr")
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_l6smt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

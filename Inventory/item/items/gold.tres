@@ -1,11 +1,19 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://80ukvp8lkbar"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://80ukvp8lkbar"]
 
 [ext_resource type="Script" path="res://Inventory/item/item_data.gd" id="1_8ou1s"]
 [ext_resource type="Texture2D" uid="uid://s0ln7jukxg57" path="res://Inventory/item/item_atlas.tres" id="2_i24x0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7oaoc"]
+atlas = ExtResource("2_i24x0")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cux2j"]
+atlas = SubResource("AtlasTexture_7oaoc")
+region = Rect2(0, 0, 16, 16)
 
 [resource]
 script = ExtResource("1_8ou1s")
 name = "Gold"
 description = ""
 stackable = true
-texture = ExtResource("2_i24x0")
+texture = SubResource("AtlasTexture_cux2j")

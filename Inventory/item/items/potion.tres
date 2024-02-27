@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="ItemDataConsumable" load_steps=4 format=3 uid="uid://bgwap2m0ow16o"]
+[gd_resource type="Resource" script_class="ItemDataConsumable" load_steps=5 format=3 uid="uid://bgwap2m0ow16o"]
 
 [ext_resource type="Script" path="res://Inventory/item/item_data_consumable.gd" id="1_bxu3u"]
+[ext_resource type="Texture2D" uid="uid://bmr0kw2wgpkak" path="res://Sprites/16x16 RPG Item Pack/Sheet.png" id="2_qjl4q"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v5irw"]
-load_path = "res://.godot/imported/Sheet.png-b036fc0706b98bd6f4d066b98b63d6bb.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i8qns"]
-atlas = SubResource("CompressedTexture2D_v5irw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2v7r5"]
+atlas = ExtResource("2_qjl4q")
 region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_307h7"]
+atlas = SubResource("AtlasTexture_2v7r5")
+region = Rect2(0, 0, 16, 16)
 
 [resource]
 script = ExtResource("1_bxu3u")
@@ -15,4 +17,4 @@ heal_value = 20
 name = "Health Potion"
 description = ""
 stackable = true
-texture = SubResource("AtlasTexture_i8qns")
+texture = SubResource("AtlasTexture_307h7")

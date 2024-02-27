@@ -22,17 +22,16 @@ scale = Vector2(0.8, 0.8)
 sprint_speed = 30.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-limit_left = 71
-limit_top = -702
-limit_right = 625
-limit_bottom = 982
+limit_left = 34
+limit_top = -1437
+limit_right = 600
+limit_bottom = 280
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(1, 727)
 tile_set = ExtResource("2_hk82v")
 format = 2
 layer_0/name = "BaseGround"
@@ -49,30 +48,30 @@ layer_2/tile_data = PackedInt32Array(-3997674, 31, 5, -3407845, 196639, 5, -3145
 color = Color(0.392157, 0.392157, 0.392157, 1)
 
 [node name="Enemy" parent="." instance=ExtResource("3_x2q7m")]
-position = Vector2(125, -210)
+position = Vector2(127, -938)
 _permanenceValue = "route_1_one"
 
 [node name="Enemy2" parent="." instance=ExtResource("3_x2q7m")]
-position = Vector2(124, -178)
+position = Vector2(126, -906)
 _permanenceValue = "route_1_two"
 
 [node name="Larger Enemy" parent="." instance=ExtResource("3_x2q7m")]
 modulate = Color(1, 0.0431373, 0.0980392, 1)
-position = Vector2(98, -193)
+position = Vector2(100, -921)
 scale = Vector2(1.3, 1.3)
 _permanenceValue = "route_1_three"
 health = 160
 
 [node name="to_main" type="Area2D" parent="."]
+position = Vector2(393, 257)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_main"]
-position = Vector2(394, 964)
 shape = SubResource("RectangleShape2D_r1gmd")
 
 [node name="to_new_ville" type="Area2D" parent="."]
+position = Vector2(409, -1414)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_new_ville"]
-position = Vector2(410, -700)
 shape = SubResource("RectangleShape2D_pn8c0")
 
 [node name="UI" parent="." instance=ExtResource("5_xx4p5")]
