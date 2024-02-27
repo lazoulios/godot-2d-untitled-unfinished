@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
+const gold = preload("res://Objects/gold.tscn")
+
 @export var _permanenceValue : String 
 @export var speed : float = 150
 @export var health = 100
 @onready var anim_player = $AnimationPlayer
+
 var player_chase = false
 var player = null
 

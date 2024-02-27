@@ -55,8 +55,7 @@ color = Color(0.392157, 0.392157, 0.392157, 1)
 y_sort_enabled = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("14_l0ltf")]
-position = Vector2(447, 156)
-_permanenceValue = "mian_one"
+position = Vector2(449, 165)
 
 [node name="Collectables" type="CanvasGroup" parent="."]
 y_sort_enabled = true
