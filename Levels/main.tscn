@@ -18,7 +18,7 @@ script = ExtResource("1_eh2nj")
 [node name="Player" parent="." instance=ExtResource("1_h5vuk")]
 light_mask = 1
 visibility_layer = 3
-position = Vector2(442, 248)
+position = Vector2(455, 280)
 scale = Vector2(0.7, 0.7)
 inventory_data = ExtResource("3_qqh0m")
 move_speed = 60.0

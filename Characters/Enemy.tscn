@@ -16,7 +16,7 @@ fill_from = Vector2(0.5, 0.46789)
 radius = 3.33282
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rltc6"]
-radius = 67.0
+radius = 77.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7fxvh"]
 radius = 7.1492
