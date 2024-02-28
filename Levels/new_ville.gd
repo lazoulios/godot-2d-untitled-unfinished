@@ -13,3 +13,8 @@ func _process(_delta):
 func _on_to_route_1_body_entered(body:Node2D):
 	if body.has_method("player"):
 		SceneManager.change_scene(SceneManager.route_1,408, -1364,player.inventory_data)
+
+
+func _on_to_route_2_body_entered(body:Node2D):
+	if body.has_method("player"):
+		SceneManager.change_scene(SceneManager.route_2,490, 890,player.inventory_data)
